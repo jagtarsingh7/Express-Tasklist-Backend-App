@@ -1,4 +1,4 @@
-const Task = require('../schema/Task');
+const Task = require('../schema/task');
 
 const getTask = (req, res) => {
   // use mongoose to get all todos in the database

@@ -1,4 +1,4 @@
-const Task = require('../schema/Task');
+const Task = require('../schema/task');
 
 const addTask= (req, res) =>{
     // create mongose method to create a new record into collection
@@ -14,4 +14,4 @@ const addTask= (req, res) =>{
     );
   }
 
-  module.exports=addTask
+module.exports=addTask

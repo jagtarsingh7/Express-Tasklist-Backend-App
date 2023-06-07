@@ -1,6 +1,8 @@
+const Task = require('../schema/task');
+
 const deleteTask = (req, res) => {
   let id = req.params.id;
-  Movie.remove(
+  Task.remove(
     {
       _id: id,
     },
@@ -10,3 +12,4 @@ const deleteTask = (req, res) => {
     }
   );
 }
+module.exports=deleteTask

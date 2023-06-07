@@ -1,4 +1,4 @@
-const Task = require('../schema/Task');
+const Task = require('../schema/task');
 
 const updateTask = (req, res) => {
   // create mongose method to update an existing record into collection

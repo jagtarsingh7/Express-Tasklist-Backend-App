@@ -1,10 +1,10 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const User = require('../schema/User');
+const User = require('../schema/users');
 
 const login = (req, res) => {
     let email = req.body.email;
-    let password = req.body.pass;
+    let password = req.body.password;
     User.find({ email: email })
         .lean()
         .exec(async function (err, user) {

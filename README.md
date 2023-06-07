@@ -3,13 +3,13 @@
 This is express backend app that allows users to view tasks details, as well as add, edit, and delete tasks from a database.
 
 ## Routes
-/
-/login
-/register
-/task/all
-/task/add
-/task/update/:id
-/task/delete/:id
+- /
+- /login
+- /register
+- /task/all
+- /task/add
+- /task/update/:id
+- /task/delete/:id
 
 ## Features
 

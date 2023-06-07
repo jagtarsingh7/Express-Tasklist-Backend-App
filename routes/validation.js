@@ -1,3 +1,4 @@
+const { body, check, validationResult } = require("express-validator");
 
 const validation = (req, res, next) => {
   check("email").isEmail().run(req);

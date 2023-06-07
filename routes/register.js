@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const User = require('../schema/User');
+const User = require('../schema/users');
 
 const register = async (req, res) => {
   // Handle the request 

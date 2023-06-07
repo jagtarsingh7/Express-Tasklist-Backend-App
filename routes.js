@@ -1,14 +1,18 @@
+//import express
 const express = require("express");
-const { body, check, validationResult } = require("express-validator");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
 // Create router
 const router = express.Router();
-//Schema 
-var Task = require("./schema/task");
-var User = require("./schema/users");
+//import routes
+const validation = require("./routes/validation");
+const login = require("./routes/login");
+const register = require("./routes/register");
+const getTask = require("./routes/getTask");
+const addTask = require("./routes/addTask");
+const updateTask = require("./routes/updateTask");
+const deleteTask = require("./routes/deleteTask");
+const authenticateToken = require("./middleware/authenticateToken");
 
-// Chained router route for Root Route
+//Chained router route for Root Route
 router.route("/").get(function (req, res) {
   res.send("<h1>welcome to my backend service</h1>")
 });
@@ -16,12 +20,18 @@ router.route("/").get(function (req, res) {
 //Login Route
 router
   .route("/login")
+  .get((req,res)=>{
+    res.send("<h3>Running<h3>")
+  })
   //validation and login
   .post(validation, login);
 
 //Register Route
 router
   .route("/register")
+  .get((req,res)=>{
+    res.send("<h3>Running<h3>")
+  })
   //validation and register function
   .post(validation, register);
 
@@ -33,6 +43,9 @@ router
 //Add a task                     
 router
   .route("/task/add/")
+  .get((req,res)=>{
+    res.send("<h3>Running<h3>")
+  })
   // create a Task
   .post(authenticateToken, addTask);
 
